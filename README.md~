@@ -147,3 +147,25 @@ Date: Sun, 25 Feb 2018 02:03:35 GMT
 [{"idcategory":1,"name":"chocolate ","description":"chocolate ice cream","valid":true}]
 ```
 
+# B1. Spring-Cloud-OAuth2-SSO : dependencies
+
+<br/>
+<ul>
+<li>Web</li>
+<li>JPA</li>
+<li>Cloud OAuth2</li>
+<li>Cloud Security</li>
+</ul>
+
+# B2. Spring-Cloud-OAuth2-SSO : Run File
+
+```
+$ mvn clean spring-boot:run
+```
+
+*buka localhost:8080/*
+
+
+jika berhasil akan di redirect ke login github..
+
+<img src="https://i.imgur.com/dMa4KNP.png"/>

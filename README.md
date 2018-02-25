@@ -167,5 +167,8 @@ $ mvn clean spring-boot:run
 
 
 jika berhasil akan di redirect ke login github..
+<img src="https://i.imgur.com/6tCVXwa.png"/>
 
+
+berhasil login maka muncul api
 <img src="https://i.imgur.com/dMa4KNP.png"/>
