@@ -6,7 +6,7 @@ Aplikasi Terdiri dari :
 <li>2. demo-integrated-angular</li>
 </ul>
 <br/>
-# A. Spring Cloud OAuth2 SSO : Dependencies
+# A1. Spring Cloud OAuth2 SSO : Dependencies
  
 <ul>
 <li>Web</li>
@@ -16,7 +16,7 @@ Aplikasi Terdiri dari :
 <li>Cloud Security</li>
 </ul>
 
-# A. Spring Cloud OAuth2 SSO : Run File
+# A2. Spring Cloud OAuth2 SSO : Run File
 
 ```
 
