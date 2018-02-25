@@ -11,13 +11,6 @@ create table table_users(
     CONSTRAINT pk_users_idusers PRIMARY KEY (idusers)
 );
 
-insert into table_users(idusers, name, username, email, password, activated)
-values ('usr-001', 'Muhammad Dicka Nirwansyah', 'dickanirwansyah', 'dickanirwansyah@gmail.com',
-'$2a$10$epYzM2vJVX/fVkq8R5GtYeBP0kwAlYrlQpwG2k/yIu7ZlNk03fQEG', true);
-
-insert into table_users(idusers, name, username, email, password, activated)
-values ('usr-002', 'Sita sinthya', 'sitasinthya', 'sitasinthya@gmail.com',
-'$2a$10$epYzM2vJVX/fVkq8R5GtYeBP0kwAlYrlQpwG2k/yIu7ZlNk03fQEG', true);
 
 create table table_roles(
     idroles varchar(255) not null,
@@ -27,16 +20,6 @@ create table table_roles(
     CONSTRAINT pk_roles_idroles PRIMARY KEY (idroles)
 );
 
-insert into table_roles(idroles, name, description)
-values ('role-001', 'ROLE_ADMIN', 'ADMIN ACCESS PERMISSION');
-
-insert into table_roles(idroles, name, description)
-values ('role-002', 'ROLE_STAFF', 'STAFF ACCESS PERMISSION');
-
-insert into table_roles(idroles, name, description)
-values ('role-003', 'ROLE_USER', 'USER ACCESS PERMISSION');
-
-insert into ta
 
 create table table_users_roles(
     idusers varchar(255) not null,
