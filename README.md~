@@ -6,7 +6,7 @@ Aplikasi Terdiri dari :
 <li>2. demo-integrated-angular</li>
 </ul>
 <br/>
-# A1. Spring Cloud OAuth2 SSO : Dependencies
+# A. Spring Cloud OAuth2 SSO : Dependencies
  
 <ul>
 <li>Web</li>
@@ -16,7 +16,7 @@ Aplikasi Terdiri dari :
 <li>Cloud Security</li>
 </ul>
 
-# A2. Spring Cloud OAuth2 SSO : Run File
+# A. Spring Cloud OAuth2 SSO : Run File
 
 ```
 
@@ -117,11 +117,32 @@ Dapat Token Baru dari refresh token
 ```
 
 <br/>
-Access ke restcontroller
+Access ke restcontroller menggunakan access_token yang baru
 <br/>
 
 ```
 
+$ curl -i -H 'Authorization: Bearer ed7e8c30-8320-4f55-bea2-0f68f581129f' http://localhost:10000/api/category/secure/list
+```
 
 
+<br/>
+Response jika berhasil
+<br/>
+
+
+```
+
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 25 Feb 2018 02:03:35 GMT
+
+[{"idcategory":1,"name":"chocolate ","description":"chocolate ice cream","valid":true}]
+```
 
