@@ -1,0 +1,20 @@
+#konfigurasi port server
+server:
+  port: 10000
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_boot
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      filter-order: 3
