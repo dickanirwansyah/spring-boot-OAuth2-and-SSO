@@ -17,7 +17,7 @@ Aplikasi Terdiri dari :
 <li>Spring-boot-starter-security</li>
 </ul>
 
-# A2. Spring Cloud OAuth2 SSO : Run File
+# A2. demo-integrated-angular : Run File
 
 ```
 
