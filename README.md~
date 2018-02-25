@@ -22,22 +22,16 @@ Aplikasi Terdiri dari :
 
 $ mvn clean spring-boot:run
 ```
-
 <br/>
 cara mendapatkan token
 <br/>
-
-
 ```
 
 $ curl -X POST -vu clientGojekApp:mysecret 'http://localhost:10000/oauth/token?username=dickanirwansyah&password=rootroot&grant_type=password'
 ```
-
 <br/>
 mendapatkan token
 <br/>
-
-
 ```
 * Hostname was NOT found in DNS cache
 *   Trying 127.0.0.1...
@@ -65,8 +59,5 @@ mendapatkan token
 * Connection #0 to host localhost left intact
 {"access_token":"bdbaddb6-56a8-45fc-9c9c-21df9eb5e30a","token_type":"bearer","refresh_token":"7dbf98ec-2977-4a64-995d-cf0305061c2e","expires_in":34828,"scope":"read write"}
 ```
-
-
-
 
 
