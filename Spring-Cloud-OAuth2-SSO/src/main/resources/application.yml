@@ -1,0 +1,25 @@
+#KONFIGURASI SSO OAUTH
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_boot
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+
+
+#OAUTH GITHUB
+security:
+  oauth2:
+    client:
+      client-id: fc1180de16bd1bb86e6f
+      client-secret: a6aadf781cc2a42893a263fb4f06fc4c139a3865
+      access-token-uri: https://github.com/login/oauth/access_token
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      client-authentication-scheme: form
+    resource:
+      user-info-uri: https://api.github.com/user
+      prefer-token-info: false
