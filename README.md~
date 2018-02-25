@@ -2,10 +2,11 @@
 <hr/>
 Aplikasi Terdiri dari :
 <ul>
-<li>1. Spring-Cloud-OAuth2-SSO</li>
-<li>2. demo-integrated-angular</li>
+<li>1. demo-integrated-angular</li>
+<li>2. Spring-Cloud-OAuth2-SSO</li>
 </ul>
 <br/>
+
 # A1. Spring Cloud OAuth2 SSO : Dependencies
  
 <ul>

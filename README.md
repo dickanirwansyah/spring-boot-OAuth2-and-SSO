@@ -2,19 +2,19 @@
 <hr/>
 Aplikasi Terdiri dari :
 <ul>
-<li>1. Spring-Cloud-OAuth2-SSO</li>
-<li>2. demo-integrated-angular</li>
+<li>1. demo-integrated-angular</li>
+<li>2. Spring-Cloud-OAuth2-SSO</li>
 </ul>
 <br/>
 
-# A1. Spring Cloud OAuth2 SSO : Dependencies
+# A1. demo-integrated-angular : Dependencies
  
 <ul>
 <li>Web</li>
 <li>JPA (Java Persistence Api)</li>
 <li>MySQL DB</li>
-<li>Cloud OAuth2</li>
-<li>Cloud Security</li>
+<li>Spring-security-Oauth2</li>
+<li>Spring-boot-starter-security</li>
 </ul>
 
 # A2. Spring Cloud OAuth2 SSO : Run File
