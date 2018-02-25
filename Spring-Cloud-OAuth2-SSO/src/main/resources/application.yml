@@ -1,5 +1,4 @@
 #KONFIGURASI SSO OAUTH
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/spring_boot
