@@ -1,5 +1,6 @@
 package com.dicka.springboot.demointegratedangular.service.impl;
 
+import com.dicka.springboot.demointegratedangular.dao.ProductDao;
 import com.dicka.springboot.demointegratedangular.entity.Product;
 import com.dicka.springboot.demointegratedangular.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,35 +12,35 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
-    private ProductService productService;
+    private ProductDao productDao;
 
     @Override
     public Product createProduct(Product product) {
-        return productService.createProduct(product);
+        return productDao.createProduct(product);
     }
 
     @Override
     public Product disabledProduct(Product product) {
-        return productService.disabledProduct(product);
+        return productDao.disabledProduct(product);
     }
 
     @Override
     public Product findIdproduct(String idproduct) {
-        return productService.findIdproduct(idproduct);
+        return productDao.findIdproduct(idproduct);
     }
 
     @Override
     public Product findByName(String name) {
-        return productService.findByName(name);
+        return productDao.findByname(name);
     }
 
     @Override
     public List<Product> findAllProduct() {
-        return productService.findAllProduct();
+        return productDao.findAllProduct();
     }
 
     @Override
     public List<Product> findDisabledProduct() {
-        return productService.findDisabledProduct();
+        return productDao.findDisabledProduct();
     }
 }
