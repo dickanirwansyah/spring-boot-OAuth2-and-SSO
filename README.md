@@ -25,6 +25,10 @@ $ mvn clean spring-boot:run
 
 <br/>
 cara mendapatkan token
+*NOTE*
+client : clientGojekApp
+secret : mysecret
+client dan secret di ambil dari database 
 <br/>
 
 
