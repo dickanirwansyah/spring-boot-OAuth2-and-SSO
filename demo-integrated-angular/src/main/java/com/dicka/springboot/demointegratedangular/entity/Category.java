@@ -8,11 +8,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+
 @Entity
 @Table(name = "category",
         catalog = "spring_boot")
@@ -35,4 +31,44 @@ public class Category implements Serializable{
     @JsonIgnore
     @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
     private Set<Product> products = new HashSet<Product>();
+
+    public int getIdcategory(){
+        return idcategory;
+    }
+
+    public void setIdcategory(int idcategory){
+        this.idcategory = idcategory;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+
+    public boolean isValid(){
+        return valid;
+    }
+
+    public void setValid(boolean valid){
+        this.valid = valid;
+    }
+
+    public Set<Product> getProducts(){
+        return products;
+    }
+
+    public void setProducts(Set<Product> products){
+        this.products=products;
+    }
 }

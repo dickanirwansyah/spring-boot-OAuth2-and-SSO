@@ -8,11 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-@Data
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+
 @Entity
 @Table(name = "product",
         catalog = "spring_boot")
