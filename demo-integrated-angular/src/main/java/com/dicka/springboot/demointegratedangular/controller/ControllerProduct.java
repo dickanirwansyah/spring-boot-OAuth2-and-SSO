@@ -31,6 +31,11 @@ public class ControllerProduct {
         return productService.createProduct(product);
     }
 
+    //update an upload
+    private Product updateAndUloadPotoToServer(Product product){
+        return productService.updateProduct(product);
+    }
+
     //save and upload to server
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping(value = "/api/product/secure/create")
@@ -54,6 +59,33 @@ public class ControllerProduct {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    //update and upload to server
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PostMapping(value = "/api/product/secure/edit")
+    public ResponseEntity<Product> updateUpload(@RequestParam(value = "file")
+                                                MultipartFile file, Product product){
+
+        String originalName = "";
+        updateAndUloadPotoToServer(product);
+        try{
+            log.debug("Process update poto..");
+            System.out.println("data peroduct "+product.getIdproduct()+" berhasil di update");
+            originalName = product.getImage();
+            byte[] bytes = file.getBytes();
+
+
+            BufferedOutputStream stream = new
+                    BufferedOutputStream(new FileOutputStream(
+                    new File("//var//www//html//server-poto//"+originalName)
+            ));
+            stream.write(bytes);
+            stream.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new ResponseEntity<Product>(product, HttpStatus.OK);
     }
 
     @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_STAFF') or hasAuthority('ROLE_USER')")
