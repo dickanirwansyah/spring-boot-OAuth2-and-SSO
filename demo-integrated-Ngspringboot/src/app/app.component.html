@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" routerLink="/home">Angular-Ngboot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li *ngIf="isAuthenticated()" routerLinkActive="active">
+          <a class="nav-link" routerLink="/home">Home
+            <span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="!isAuthenticated()">
+            <a class="nav-link" routerLink="Portal">Portal</a>
+        </li>
+        <li *ngIf="isAuthenticated()" routerLinkActive="active">
+          <a class="nav-link" routerLink="data/product">Product</a>
+        </li>
+        <li *ngIf="isAuthenticated()" routerLinkActive="active">
+            <a class="nav-link" routerLink="data/category">Category</a>
+        </li>
+        <!--
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+        -->
+      </ul>
+      <button (click)="logout()" *ngIf="isAuthenticated()" class="btn btn-outline-success my-2 my-sm-0">
+          <span class="fa fa-lock"></span>
+          Sign Out
+      </button>
+    </div>
+  </nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+

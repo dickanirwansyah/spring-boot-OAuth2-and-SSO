@@ -1,6 +1,7 @@
 #konfigurasi port server
 server:
   port: 10000
+  context-path: /server-angular
 
 spring:
   datasource:

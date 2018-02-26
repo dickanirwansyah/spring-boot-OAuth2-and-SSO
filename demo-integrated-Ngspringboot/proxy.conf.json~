@@ -1,0 +1,7 @@
+{
+	"/category/*":{
+	"target": "http://localhost:10000/api",
+	"secure": false
+}
+	
+}

@@ -1,0 +1,52 @@
+  <h3>Data Category</h3>
+  <div class="page-header">
+    <br/>
+    <button class="btn btn-success">
+      <span class="fa fa-plus"></span>
+      Tambah Data
+    </button>
+    <br/>
+    <br/>
+    <table class="table table-hover table-bordered table-striped">
+      <thead>
+          <tr>
+            <td>No.</td>
+            <td>Nama</td>
+            <td>Deskripsi</td>
+            <td>Status</td>
+            <td>Opsi</td>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of Category; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{category.name}}</td>
+          <td>{{category.description}}</td>
+          <td>
+            <span style="color: blue">
+              <b>{{category.valid}}</b>
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-success">
+              <span class="fa fa-pencil-square-o"></span>
+              Edit
+            </button>
+            <button class="btn btn-default">
+              <span class="fa fa-trash"></span>
+              Hapus
+            </button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>No.</td>
+          <td>Nama</td>
+          <td>Deskripsi</td>
+          <td>Status</td>
+          <td>Opsi</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>

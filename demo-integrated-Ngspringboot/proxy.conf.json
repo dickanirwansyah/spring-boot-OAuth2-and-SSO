@@ -1,0 +1,12 @@
+{
+	"/category/*":{
+	  "target": "http://localhost:10000/server-angular/api/",
+	  "secure": false
+	},
+
+	"/oauth/*":{
+		"target": "http://localhost:10000/server-angular/",
+		"secure": false
+	}
+}
+
