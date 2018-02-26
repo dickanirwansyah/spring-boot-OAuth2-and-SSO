@@ -64,7 +64,7 @@ public class ControllerProduct {
     //update and upload to server
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping(value = "/api/product/secure/edit")
-    public ResponseEntity<Product> updateUpload(@RequestParam(value = "file")
+    public @ResponseBody void updateUpload(@RequestParam(value = "file")
                                                 MultipartFile file, Product product){
 
         String originalName = "";
@@ -85,7 +85,7 @@ public class ControllerProduct {
         }catch (Exception e){
             e.printStackTrace();
         }
-        return new ResponseEntity<Product>(product, HttpStatus.OK);
+
     }
 
     @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_STAFF') or hasAuthority('ROLE_USER')")
