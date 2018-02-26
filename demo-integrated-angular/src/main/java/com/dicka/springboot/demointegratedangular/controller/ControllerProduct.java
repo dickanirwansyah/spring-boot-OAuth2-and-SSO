@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -67,18 +66,18 @@ public class ControllerProduct {
     public @ResponseBody void updateUpload(@RequestParam(value = "file")
                                                 MultipartFile file, Product product){
 
-        String originalName = "";
+        String originalNamePoto = "";
         updateAndUloadPotoToServer(product);
         try{
-            log.debug("Process update poto..");
-            System.out.println("data peroduct "+product.getIdproduct()+" berhasil di update");
-            originalName = product.getImage();
+            log.debug("Update upload image");
             byte[] bytes = file.getBytes();
+            originalNamePoto = product.getImage();
 
+            System.out.println("image "+originalNamePoto+" berhasil diedit !");
 
             BufferedOutputStream stream = new
                     BufferedOutputStream(new FileOutputStream(
-                    new File("//var//www//html//server-poto//"+originalName)
+                    new File("//var//www//html//server-poto//"+originalNamePoto)
             ));
             stream.write(bytes);
             stream.close();
@@ -108,7 +107,7 @@ public class ControllerProduct {
     @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_STAFF')")
     @PostMapping(value = "/api/product/secure/update")
     public ResponseEntity<Product> justUpdate(@RequestBody Product product){
-        return Optional.ofNullable(productService.updateProduct(product))
+        return Optional.ofNullable(productService.createProduct(product))
                 .map(resultset -> new ResponseEntity<>(resultset, HttpStatus.OK))
                 .orElse(new ResponseEntity<Product>(HttpStatus.BAD_REQUEST));
     }
