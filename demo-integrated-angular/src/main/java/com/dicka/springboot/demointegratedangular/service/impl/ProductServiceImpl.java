@@ -20,6 +20,11 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public Product updateProduct(Product product) {
+        return productDao.updateProduct(product);
+    }
+
+    @Override
     public Product disabledProduct(Product product) {
         return productDao.disabledProduct(product);
     }

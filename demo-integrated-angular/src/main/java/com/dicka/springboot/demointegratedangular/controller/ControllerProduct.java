@@ -63,4 +63,21 @@ public class ControllerProduct {
                 .map(resultset -> new ResponseEntity<>(resultset, HttpStatus.OK))
                 .orElse(new ResponseEntity<List<Product>>(HttpStatus.BAD_REQUEST));
     }
+
+    @PreAuthorize("hasAuthority('ROLE_STAFF')")
+    @GetMapping(value = "/api/product/secure/lost")
+    public ResponseEntity<List<Product>> getLost(){
+        return Optional.ofNullable(productService.findDisabledProduct())
+                .map(resultset -> new ResponseEntity<>(resultset, HttpStatus.OK))
+                .orElse(new ResponseEntity<List<Product>>(HttpStatus.NOT_FOUND));
+    }
+
+    //just update entity
+    @PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_STAFF')")
+    @PostMapping(value = "/api/product/secure/update")
+    public ResponseEntity<Product> justUpdate(@RequestBody Product product){
+        return Optional.ofNullable(productService.updateProduct(product))
+                .map(resultset -> new ResponseEntity<>(resultset, HttpStatus.OK))
+                .orElse(new ResponseEntity<Product>(HttpStatus.BAD_REQUEST));
+    }
 }

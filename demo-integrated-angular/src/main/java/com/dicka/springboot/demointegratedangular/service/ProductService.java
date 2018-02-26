@@ -8,6 +8,8 @@ public interface ProductService {
 
     Product createProduct(Product product);
 
+    Product updateProduct(Product product);
+
     Product disabledProduct(Product product);
 
     Product findIdproduct(String idproduct);

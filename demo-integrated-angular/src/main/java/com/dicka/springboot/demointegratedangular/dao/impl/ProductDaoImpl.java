@@ -31,9 +31,14 @@ public class ProductDaoImpl implements ProductDao{
                     .toString()
                     .substring(25)+".jpg");
             productRepository.save(product);
-        }else if (product.getIdproduct() != null){
-            productRepository.save(product);
         }
+        return product;
+    }
+
+    @Override
+    public Product updateProduct(Product product) {
+        if(!entityManager.contains(product))
+            product = entityManager.merge(product);
         return product;
     }
 

@@ -14,7 +14,7 @@ import java.util.List;
 @ToString
 @EqualsAndHashCode
 @Entity
-@Table(name = "products",
+@Table(name = "product",
         catalog = "spring_boot")
 public class Product implements Serializable{
 
@@ -43,6 +43,6 @@ public class Product implements Serializable{
     private Category category;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
     private List<OrdersDetils> ordersDetils;
 }

@@ -14,7 +14,7 @@ import java.util.Set;
 @ToString
 @EqualsAndHashCode
 @Entity
-@Table(name = "categorys",
+@Table(name = "category",
         catalog = "spring_boot")
 public class Category implements Serializable{
 
