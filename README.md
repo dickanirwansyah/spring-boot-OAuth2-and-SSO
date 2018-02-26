@@ -4,6 +4,7 @@ Aplikasi Terdiri dari :
 <ul>
 <li>1. demo-integrated-angular</li>
 <li>2. Spring-Cloud-OAuth2-SSO</li>
+<li>3. demo-integrated-Ngspringboot (Client App Angular 4)</li>
 </ul>
 <br/>
 
